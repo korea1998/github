@@ -1,73 +1,224 @@
-/* common */
-.body__container{
-    font-family: 'Roboto', sans-serif;
-    font-size: 100px;
-    color: #333;
-}
-/* btn */
-.btn{
-    padding: 0 12px;
-    height: 34px;
-    background: #eee linear-gradient(to bottom, #fcfcfc, #eee);
-    border: 1px solid #d5d5d5;
-    border-radius: 4px;
-    box-sizing: border-box;
-    font-size: 14px;
-    font-weight: 500;
-    cursor: pointer;
-    line-height: 1.5;
-    align-items: center;
-    display: inline-flex;
-    position: relative;
-}
-.btn:hover::before{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.7);
-}   
-.btn.btn--primary{
-    border: 1px solid #65b836;
-    color: #fff;
-    background: #55a532 linear-gradient(#91dd70, #55ae2e );
-}
-/* input text*/
-.input--text{
-    padding: 0 10px;
-    height: 34px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-sizing: border-box;
-    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075);
-    outline: none;
-    font-size: 16px;
-}
-.input--text:focus{
-    border-color: #51a7e8;
-    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075),
-                0 0 5px rgba(81, 167, 232, 0.5);
-}
-/* chrome */
-.input--text::-webkit-input-placeholder{color: #cacaca; font-size: 12px;}
-/* internetExploer, EdgeBrower */
-.input--text::-ms-input-placeholder{color: #cacaca;}
-/* firefox */
-.input--text::-moz-input-placeholder{color: #cacaca;}
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta property="og:type" content="website"> 
+    <meta property="og:title" content="필름라이크">
+    <meta property="og:description" content="[Filmlike] 필름라이크 | 본식스냅 | 가봉스냅 | 웨딩촬영 |">
+    <meta property="og:image" content="http://www.filmlikephoto.com/LOGO.jpg">
+    <meta property="og:url" content="http://www.filmlikephoto.com/index.html">
+    <link rel="canonical" href="http://www.filmlikephoto.com"> 
+    <meta name="description" content="[Filmlike] 필름라이크 | 본식스냅 | 가봉스냅 | 웨딩촬영 |">
+    <meta name="robots" content="index,follow">
+    <meta name="naver-site-verification" content="16cc564fa9f5d3e328e0993b9feba1309f30953a" />
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="author" content="">
+    <title>필름라이크 | 본식스냅 | 가봉스냅 | 웨딩촬영 |</title>
 
+    <!-- Icon -->
+    <link rel="icon" sizes="192x192" href="./LOGO.jpg">
+    <link rel="shortcut icon" href="./LOGO.jpg"; type="image/x-icon"/>
+    <link rel="apple-touch-icon" href="./LOGO.jpg"; type="image/x-icon"/>
+    <!-- mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0"> 
+    <!-- robots.txt -->
+    <meta name="robots" content="index,follow">
+    <!-- SEO Collect -->
+    <meta name="NaverBot" content="All"/>
+    <meta name="NaverBot" content="index"/>
+    <meta name="NaverBot" content="follow"/>
+    <meta name="Yeti" content="All"/>
+    <meta name="Yeti" content="index,follow"/>	
 
-
-/* media */
-@media screen and (mwax-width: 1024px){
-
-}
-
-/* 정리
-    1. 아이콘
-    2. 폰트
-    3. 그라디언트    
-    4. 클래스연속
-    5. 크로스브라우징
+    <!-- css -->
+    <style>
+        /* reset css */
+        /* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
 */
+
+        html, body, div, span, applet, object, iframe,
+        h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+        a, abbr, acronym, address, big, cite, code,
+        del, dfn, em, img, ins, kbd, q, s, samp,
+        small, strike, strong, sub, sup, tt, var,
+        b, u, i, center,
+        dl, dt, dd, ol, ul, li,
+        fieldset, form, label, legend,
+        table, caption, tbody, tfoot, thead, tr, th, td,
+        article, aside, canvas, details, embed, 
+        figure, figcaption, footer, header, hgroup, 
+        menu, nav, output, ruby, section, summary,
+        time, mark, audio, video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+        }
+        /* HTML5 display-role reset for older browsers */
+        article, aside, details, figcaption, figure, 
+        footer, header, hgroup, menu, nav, section {
+            display: block;
+        }
+        body {
+            line-height: 1;
+        }
+        ol, ul {
+            list-style: none;
+        }
+        blockquote, q {
+            quotes: none;
+        }
+        blockquote:before, blockquote:after,
+        q:before, q:after {
+            content: '';
+            content: none;
+        }
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        header{
+            background-color: #635d53;
+            width: 100%;
+            height: 650px;
+        }
+        .header_title{
+            text-align: right;
+            color: #C8C9C5;
+            font-size: 55px;
+            padding-top: 130px;
+            padding-right: 100px;
+            line-height: 1.2em;
+        }
+        #title_one{
+            font-weight: bold;
+        }
+        #title_two{
+            font-weight: 100;
+            padding-right: 10px;
+        }
+        .header_title_sub{
+            text-align: right;
+            color: #C8C9C5;
+            font-size: 19px;
+            padding-top: 80px;
+            padding-right: 100px;
+            line-height: 1.5em;
+        }
+        .header_title_link{
+            padding-top: 50px;
+            margin-right: 100px;
+            font-weight: bold;
+            text-align: right;
+
+        }
+        .header_title_link a{
+            text-decoration: none;
+            color: #C8C9C5;
+            font-size: 38px;
+        }
+        main{
+            width: 100%;
+            height: 10VW;
+            background-color: #393d32;
+            color: #C8C9C5;
+            text-align: center;
+            position: relative;
+        }
+        .main_introduce{
+            position: relative;
+            top: 110px;
+        }
+        /* .main_introduce{
+
+        } */
+        @media screen and (max-width: 800px) {
+            html, body, div, span, applet, object, iframe,
+            h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+            a, abbr, acronym, address, big, cite, code,
+            del, dfn, em, img, ins, kbd, q, s, samp,
+            small, strike, strong, sub, sup, tt, var,
+            b, u, i, center,
+            dl, dt, dd, ol, ul, li,
+            fieldset, form, label, legend,
+            table, caption, tbody, tfoot, thead, tr, th, td,
+            article, aside, canvas, details, embed, 
+            figure, figcaption, footer, header, hgroup, 
+            menu, nav, output, ruby, section, summary,
+            time, mark, audio, video {
+                margin: 0;
+                padding: 0;
+                border: 0;
+                font-size: 100%;
+                font: inherit;
+                vertical-align: baseline;
+            }
+            body{
+                overflow-x: hidden;
+            }
+            header{
+                width: 100%;
+                height: 155vw;
+            }
+            .header_title{
+                font-size: 45px;
+                padding-top: 130px;
+                padding-right: 20px;
+            }
+            #title_one{
+                font-weight: bold;
+            }
+            #title_two{
+                font-weight: 100;
+            }
+            .header_title_sub{
+                line-height: 1.5em;
+                text-align: right;
+                padding-top: 50px;
+                padding-right: 20px;
+            }
+            .header_title_link{
+                padding-top: 50px;
+                margin-right: 20px;
+                font-weight: bold;
+            }
+            main{
+                width: 100%;
+                height: 25VW;
+                position: relative;
+            }
+            .main_introduce{
+                position: relative;
+            top: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header_title">
+              <span id="title_one">F I L M L I K E</span>
+                <br>
+              <span id="title_two">필 름 라 이 크</span>
+        </div>
+        <div class="header_title_sub">
+                소중한  순간을 보다 아름답도록
+                <br>
+                특별한 날을 위한 다큐
+        </div>
+        <div class="header_title_link">
+           <a href="https://blog.naver.com/filmlikest">바로가기</a> 
+        </div>
+    </header>
+    <main>
+        <div class="main_introduce">필름라이크 [FILMLIKE] | 사업자등록번호 : 619-03-32914 | 연락처 : 010-5424-7369 | 이메일주소 : filmlikest@naver.com</div>
+    </main>
+</body>
